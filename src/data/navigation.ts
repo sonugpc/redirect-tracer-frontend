@@ -161,8 +161,8 @@ export const NAVIGATION_DEMO: NavItemType[] = [
   },
   {
     id: ncNanoId(),
-    href: "/support",
-    name: "Support",
+    href: "/contact",
+    name: "Contact",
     // type: "dropdown",
     // children: templateChilds,
   },

@@ -2,7 +2,6 @@ import React, { FC } from "react";
 import PostActionDropdown from "components/PostActionDropdown/PostActionDropdown";
 import PostCardLikeAndComment from "components/PostCardLikeAndComment/PostCardLikeAndComment";
 import SocialsShare from "components/SocialsShare/SocialsShare";
-import BookmarkContainer from "containers/BookmarkContainer/BookmarkContainer";
 import { PostDataType } from "data/types";
 
 export interface SingleMetaActionProps {
@@ -34,12 +33,6 @@ const SingleMetaAction: FC<SingleMetaActionProps> = ({
           <div
             className={`flex items-center space-x-2 text-xs text-neutral-700 dark:text-neutral-200 `}
           >
-            <BookmarkContainer
-              initBookmarked={bookmark.isBookmarked}
-              postId={String(id)}
-              containerClassName="h-9 w-9 bg-neutral-100 hover:bg-neutral-200 dark:bg-neutral-800 dark:hover:bg-neutral-700"
-              iconClass="h-5 w-5"
-            />
             <PostActionDropdown
               containerClassName="h-9 w-9 bg-neutral-100 hover:bg-neutral-200 dark:bg-neutral-800 dark:hover:bg-neutral-700"
               iconClass="h-5 w-5"

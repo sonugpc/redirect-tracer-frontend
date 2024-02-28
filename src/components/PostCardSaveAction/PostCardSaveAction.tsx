@@ -1,5 +1,4 @@
 import { PostActionDropdownProps } from "components/PostActionDropdown/PostActionDropdown";
-import BookmarkContainer from "containers/BookmarkContainer/BookmarkContainer";
 import { PostDataType } from "data/types";
 import React, { FC } from "react";
 
@@ -29,12 +28,6 @@ const PostCardSaveAction: FC<PostCardSaveActionProps> = ({
       {!hidenReadingTime && !!readingTime && (
         <span>{readingTime} min read</span>
       )}
-
-      <BookmarkContainer
-        initBookmarked={bookmark.isBookmarked}
-        containerClassName={classBgIcon}
-        postId={id}
-      />
     </div>
   );
 };

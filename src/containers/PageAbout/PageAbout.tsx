@@ -1,5 +1,4 @@
 import SectionHero from "components/SectionHero/SectionHero";
-import rightImg from "images/about-hero-right.png";
 import React, { FC } from "react";
 import SectionFounder from "./SectionFounder";
 import SectionStatistic from "./SectionStatistic";
@@ -7,6 +6,8 @@ import { Helmet } from "react-helmet";
 import SectionSubscribe2 from "components/SectionSubscribe2/SectionSubscribe2";
 import BgGlassmorphism from "components/BgGlassmorphism/BgGlassmorphism";
 import BackgroundSection from "components/BackgroundSection/BackgroundSection";
+import Config from "../../../config";
+import WhatIsRedirectChecker from "components/RedirectPageInfo/WhatIsRedirectChecker";
 
 export interface PageAboutProps {
   className?: string;
@@ -14,31 +15,27 @@ export interface PageAboutProps {
 
 const PageAbout: FC<PageAboutProps> = ({ className = "" }) => {
   return (
-    <div
-      className={`nc-PageAbout overflow-hidden relative ${className}`}
-      data-nc-id="PageAbout"
-    >
+    <div className={` overflow-hidden relative ${className}`}>
       <Helmet>
-        <title>About || Blog Magazine React Template</title>
+        <title>About | WhereGoes.online </title>
       </Helmet>
 
       {/* ======== BG GLASS ======== */}
       <BgGlassmorphism />
 
       <div className="container py-16 lg:py-28 space-y-16 lg:space-y-28">
-        <SectionHero
-          rightImg={rightImg}
-          heading="👋 About Us."
-          btnText=""
-          subHeading="We’re impartial and independent, and every day we create distinctive, world-class programmes and content which inform, educate and entertain millions of people in the around the world."
-        />
+        {Config.ABOUT_US_CONTENT.map((res, index: number) => (
+          <WhatIsRedirectChecker
+            key={index}
+            heading={res.heading}
+            content={res.subHeading}
+          />
+        ))}
 
-        <SectionFounder />
-
-        <div className="relative py-16">
+        {/* <div className="relative py-16">
           <BackgroundSection />
           <SectionStatistic />
-        </div>
+        </div> */}
 
         <SectionSubscribe2 />
       </div>

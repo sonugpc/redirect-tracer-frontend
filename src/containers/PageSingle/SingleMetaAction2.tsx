@@ -2,7 +2,6 @@ import React, { FC } from "react";
 import PostActionDropdown from "components/PostActionDropdown/PostActionDropdown";
 import PostCardLikeAndComment from "components/PostCardLikeAndComment/PostCardLikeAndComment";
 import { SOCIALS_DATA } from "components/SocialsShare/SocialsShare";
-import BookmarkContainer from "containers/BookmarkContainer/BookmarkContainer";
 import { PostDataType } from "data/types";
 import NcDropDown from "components/NcDropDown/NcDropDown";
 
@@ -30,12 +29,6 @@ const SingleMetaAction2: FC<SingleMetaAction2Props> = ({
           <div className="border-l border-neutral-200 dark:border-neutral-700 h-6" />
         </div>
 
-        <BookmarkContainer
-          initBookmarked={bookmark.isBookmarked}
-          postId={String(id)}
-          containerClassName="h-9 w-9 bg-neutral-100 hover:bg-neutral-200 dark:bg-neutral-800 dark:hover:bg-neutral-700 dark:text-neutral-200"
-          iconClass="h-5 w-5"
-        />
         <NcDropDown
           className="flex-shrink-0 flex items-center justify-center focus:outline-none h-9 w-9 bg-neutral-100 hover:bg-neutral-200 dark:bg-neutral-800 dark:hover:bg-neutral-700 text-neutral-700 dark:text-neutral-200 rounded-full"
           renderTrigger={() => (

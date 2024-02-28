@@ -29,7 +29,7 @@ const info = [
 
 const PageContact: FC<PageContactProps> = ({ className = "" }) => {
   return (
-    <div className={`nc-PageContact ${className}`} data-nc-id="PageContact">
+    <div className={`${className}`}>
       <Helmet>
         <title>Contact || Redirect Tracer</title>
       </Helmet>

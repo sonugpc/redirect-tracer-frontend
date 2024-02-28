@@ -8,7 +8,6 @@ import {
 import ReactPlayer from "react-player";
 import { PostDataType } from "data/types";
 import NcImage from "components/NcImage/NcImage";
-import BookmarkContainer from "containers/BookmarkContainer/BookmarkContainer";
 import PostCardLikeContainer from "containers/PostCardLikeContainer/PostCardLikeContainer";
 import LoadingVideo from "components/LoadingVideo/LoadingVideo";
 import { Link } from "react-router-dom";
@@ -195,10 +194,6 @@ const MediaRunningContainer: FC<MediaRunningContainerProps> = ({
         </Link>
         <div className="hidden md:flex flex-shrink-0 px-6 dark text-white space-x-2.5">
           <PostCardLikeContainer like={like} postId={id} />
-          <BookmarkContainer
-            initBookmarked={bookmark.isBookmarked}
-            postId={id}
-          />
         </div>
       </div>
     );

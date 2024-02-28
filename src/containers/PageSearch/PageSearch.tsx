@@ -1,31 +1,16 @@
-import React, { FC, useState } from "react";
-import { DEMO_POSTS } from "data/posts";
-import { PostDataType } from "data/types";
-import Pagination from "components/Pagination/Pagination";
-import ButtonPrimary from "components/Button/ButtonPrimary";
-import Nav from "components/Nav/Nav";
-import NavItem from "components/NavItem/NavItem";
-import ArchiveFilterListBox from "components/ArchiveFilterListBox/ArchiveFilterListBox";
-import Input from "components/Input/Input";
-import { Helmet } from "react-helmet";
-import SectionSubscribe2 from "components/SectionSubscribe2/SectionSubscribe2";
-import NcImage from "components/NcImage/NcImage";
-import NcLink from "components/NcLink/NcLink";
-import SectionSliderNewAuthors from "components/SectionSliderNewAthors/SectionSliderNewAuthors";
-import { DEMO_AUTHORS } from "data/authors";
-import ButtonSecondary from "components/Button/ButtonSecondary";
-import { DEMO_CATEGORIES } from "data/taxonomies";
-import SectionGridCategoryBox from "components/SectionGridCategoryBox/SectionGridCategoryBox";
-import BackgroundSection from "components/BackgroundSection/BackgroundSection";
-import Card11 from "components/Card11/Card11";
 import ButtonCircle from "components/Button/ButtonCircle";
-import CardCategory2 from "components/CardCategory2/CardCategory2";
-import Tag from "components/Tag/Tag";
-import CardAuthorBox2 from "components/CardAuthorBox2/CardAuthorBox2";
-import useTracer from "../../hooks/useTracer";
-import TraceResult from "components/Tracer/TraceResult";
+import Input from "components/Input/Input";
+import NcImage from "components/NcImage/NcImage";
 import WhatIsRedirectChecker from "components/RedirectPageInfo/WhatIsRedirectChecker";
+import SectionSubscribe2 from "components/SectionSubscribe2/SectionSubscribe2";
+import TraceResult from "components/Tracer/TraceResult";
+import { DEMO_AUTHORS } from "data/authors";
+import { DEMO_POSTS } from "data/posts";
+import { DEMO_CATEGORIES } from "data/taxonomies";
+import { PostDataType } from "data/types";
+import { FC, useState } from "react";
 import Config from "../../../config";
+import useTracer from "../../hooks/useTracer";
 export interface PageSearchProps {
   className?: string;
 }
@@ -192,9 +177,6 @@ const PageSearch: FC<PageSearchProps> = ({ className = "" }) => {
                 </div>
                 <div className="inline-block">
                   Use http:// or https:// with your URL
-                  <NcLink className="mr-2.5 inline-block font-normal" to="/#">
-                    Advanced Options
-                  </NcLink>
                 </div>
               </div>
             </header>

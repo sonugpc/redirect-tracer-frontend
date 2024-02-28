@@ -2,14 +2,24 @@ import React, { FC } from "react";
 
 export interface HeadBackgroundCommonProps {
   className?: string;
+  type?: number;
 }
 
 const HeadBackgroundCommon: FC<HeadBackgroundCommonProps> = ({
-  className = "absolute h-[400px]",
+  className = "",
+  type = 2,
 }) => {
+  if (type == 1) {
+    className += "bg-gradient-to-r from-violet-600 to-indigo-600 ";
+  } else if (type == 2) {
+    className += "bg-gradient-to-r from-amber-500 to-pink-500";
+  } else {
+    className +=
+      "bg-opacity-25 bg-primary-100 dark:bg-neutral-800  dark:bg-opacity-40 ";
+  }
   return (
     <div
-      className={`nc-HeadBackgroundCommon ${className} top-0 left-0 right-0 w-full bg-primary-100 dark:bg-neutral-800 bg-opacity-25 dark:bg-opacity-40`}
+      className={`nc-HeadBackgroundCommon ${className} top-0 absolute h-[400px] left-0 right-0 w-full  `}
       data-nc-id="HeadBackgroundCommon"
     />
   );

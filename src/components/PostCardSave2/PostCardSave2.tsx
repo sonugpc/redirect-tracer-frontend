@@ -1,5 +1,4 @@
 import React, { FC } from "react";
-import BookmarkContainer from "containers/BookmarkContainer/BookmarkContainer";
 import { PostDataType } from "data/types";
 
 export interface PostCardSave2Props
@@ -22,13 +21,7 @@ const PostCardSave2: FC<PostCardSave2Props> = ({
       data-nc-id="PostCardSave2"
     >
       <span>{readingTime} min read</span>
-      <span className="text-neutral-700 hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-neutral-300">
-        <BookmarkContainer
-          initBookmarked={bookmark.isBookmarked}
-          containerClassName={classBgIcon}
-          postId={id}
-        />
-      </span>
+      <span className="text-neutral-700 hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-neutral-300"></span>
     </div>
   );
 };

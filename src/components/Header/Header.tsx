@@ -2,7 +2,6 @@ import React, { FC, useEffect, useRef, useState } from "react";
 import SocialsShare from "components/SocialsShare/SocialsShare";
 import Avatar from "components/Avatar/Avatar";
 import { SinglePageType } from "containers/PageSingle/PageSingle";
-import BookmarkContainer from "containers/BookmarkContainer/BookmarkContainer";
 import PostCardLikeContainer from "containers/PostCardLikeContainer/PostCardLikeContainer";
 import { PageItemType } from "app/pages/pages";
 import MainNav2Logged from "./MainNav2Logged";
@@ -126,11 +125,6 @@ const Header: FC<HeaderProps> = ({ mainNavStyle = "style1", currentPage }) => {
 
             {/* ACTION */}
             <div className="flex items-center space-x-2 text-neutral-800 sm:space-x-3 dark:text-neutral-100">
-              <PostCardLikeContainer postId={SINGLE.id} like={SINGLE.like} />
-              <BookmarkContainer
-                initBookmarked={bookmark.isBookmarked}
-                postId={id}
-              />
               <div className="border-l border-neutral-300 dark:border-neutral-700 h-6"></div>
               <SocialsShare
                 className="flex space-x-2"

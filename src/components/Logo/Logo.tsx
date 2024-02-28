@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import logoImg from "images/logo.png";
-import logoLightImg from "images/logo-light.png";
 import LogoSvg from "./LogoSvg";
 
 export interface LogoProps {
@@ -9,10 +8,7 @@ export interface LogoProps {
   imgLight?: string;
 }
 
-const Logo: React.FC<LogoProps> = ({
-  img = logoImg,
-  imgLight = logoLightImg,
-}) => {
+const Logo: React.FC<LogoProps> = ({}) => {
   return (
     <Link to="/" className="ttnc-logo inline-block text-primary-6000">
       {/* THIS USE FOR MY MULTI DEMO */}

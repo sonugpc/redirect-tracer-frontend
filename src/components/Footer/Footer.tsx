@@ -100,6 +100,12 @@ const Footer: React.FC = () => {
             <Logo />
           </div>
           <div className="col-span-2 flex items-center md:col-span-3">
+            By using this website, you are agreeing to the{" "}
+            <a href="/privacy">privacy policy</a>.
+            {/* <SocialsList1 className="flex items-center space-x-3 lg:space-x-0 lg: lg:space-y-2.5 lg:items-start" /> */}
+          </div>
+          <div className="col-span-2 flex items-center md:col-span-3">
+            © 2023-2024 WhereGoes.online. All rights reserved.
             {/* <SocialsList1 className="flex items-center space-x-3 lg:space-x-0 lg: lg:space-y-2.5 lg:items-start" /> */}
           </div>
         </div>

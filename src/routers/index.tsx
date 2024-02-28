@@ -39,12 +39,14 @@ import MediaRunningContainerForSafari from "containers/MediaRunningContainer/Med
 import isSafariBrowser from "utils/isSafariBrowser";
 import PageHomeDemo7 from "containers/PageHome/PageHomeDemo7";
 import PageSingleTemp4Sidebar from "containers/PageSingle/PageSingleTemp4Sidebar";
+import PagePrivacy from "containers/PagePrivacy/PagePrivacy";
 
 export const pages: Page[] = [
   { path: "/", exact: true, component: PageHome },
 
   { path: "/about", component: PageAbout },
   { path: "/contact", component: PageContact },
+  { path: "/privacy", component: PagePrivacy },
 ];
 
 const Routes = () => {
