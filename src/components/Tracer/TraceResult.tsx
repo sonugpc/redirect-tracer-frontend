@@ -7,7 +7,7 @@ function TraceResult({ result }) {
       <h2 className="text-3xl font-bold text-center mt-2">Trace Results</h2>
       <div className="w-full max-w-3xl mx-auto">
         <div className="-my-6">
-          {result.map((redirectTrace: any, index) => {
+          {result.map((redirectTrace: any, index: number) => {
             return <TraceEntry key={index} entry={redirectTrace} />;
           })}
         </div>

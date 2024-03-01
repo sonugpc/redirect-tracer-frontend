@@ -35,7 +35,6 @@ const PageSearch: FC<PageSearchProps> = ({ className = "" }) => {
   const content = Config.SITE_CONTENT;
   const title = "URL Redirect Checker";
 
-  const [tabActive, setTabActive] = useState<(typeof TABS)[number]>(TABS[0]);
   const [formValues, setFormValues] = useState({
     url: "",
   });
@@ -197,7 +196,7 @@ const PageSearch: FC<PageSearchProps> = ({ className = "" }) => {
         {/* === SECTION 5 === */}
 
         {/* SUBCRIBES */}
-        {content.map((item, index) => (
+        {content.map((item: any, index: number) => (
           <WhatIsRedirectChecker
             heading={item.heading}
             content={item.content}

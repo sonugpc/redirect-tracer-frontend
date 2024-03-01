@@ -28,6 +28,8 @@ export interface LocationStates {
   "/search-v2"?: {};
   "/about"?: {};
   "/contact"?: {};
+  "/privacy"?: {};
+
   "/login"?: {};
   "/signup"?: {};
   "/forgot-pass"?: {};

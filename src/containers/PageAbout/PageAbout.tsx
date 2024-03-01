@@ -24,7 +24,7 @@ const PageAbout: FC<PageAboutProps> = ({ className = "" }) => {
       <BgGlassmorphism />
 
       <div className="container py-16 lg:py-28 space-y-16 lg:space-y-28">
-        {Config.ABOUT_US_CONTENT.map((res, index: number) => (
+        {Config.ABOUT_US_CONTENT.map((res: any, index: number) => (
           <WhatIsRedirectChecker
             key={index}
             heading={res.heading}
