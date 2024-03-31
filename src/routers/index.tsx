@@ -7,10 +7,12 @@ import PageAbout from "containers/PageAbout/PageAbout";
 import PageContact from "containers/PageContact/PageContact";
 import PageHome from "containers/PageHome/PageHome";
 import PagePrivacy from "containers/PagePrivacy/PagePrivacy";
-import { BrowserRouter, Route, Switch } from "react-router-dom";
+import { BrowserRouter, Route, Switch, useLocation } from "react-router-dom";
 import isSafariBrowser from "utils/isSafariBrowser";
 import ScrollToTop from "./ScrollToTop";
 import { Page } from "./types";
+import { useEffect } from "react";
+import ReactGA from "react-ga4";
 
 export const pages: Page[] = [
   { path: "/", exact: true, component: PageHome },
@@ -21,8 +23,15 @@ export const pages: Page[] = [
 ];
 
 const Routes = () => {
+  const location = useLocation();
+  useEffect(() => {
+    ReactGA.send({
+      hitType: "pageview",
+      page: location?.pathname + location?.search,
+    });
+  }, [location]);
   return (
-    <BrowserRouter>
+    <>
       <ScrollToTop />
       <HeaderContainer />
       <Switch>
@@ -47,7 +56,7 @@ const Routes = () => {
       ) : (
         <MediaRunningContainer />
       )}
-    </BrowserRouter>
+    </>
   );
 };
 

@@ -10,6 +10,8 @@ import { DEMO_CATEGORIES } from "data/taxonomies";
 import { PostDataType } from "data/types";
 import { FC, useState } from "react";
 import Config from "../../../config";
+import ReactGA from "react-ga4";
+
 import useTracer from "../../hooks/useTracer";
 export interface PageSearchProps {
   className?: string;
@@ -78,11 +80,15 @@ const PageSearch: FC<PageSearchProps> = ({ className = "" }) => {
   };
   const handleSubmitForm = (ev: any) => {
     ev.preventDefault();
+    ReactGA.event({
+      category: "Tracer",
+      action: "page_trace",
+      label: "Trace Page " + formValues.url.trim(),
+    });
 
     if (!validateForm()) {
       return;
     }
-    console.log(trace, loading, error);
 
     trace({ shortUrl: formValues.url.trim() });
   };
@@ -93,7 +99,7 @@ const PageSearch: FC<PageSearchProps> = ({ className = "" }) => {
         <div className="rounded-3xl md:rounded-[40px] relative aspect-w-16 aspect-h-16 sm:aspect-h-9 lg:aspect-h-5 overflow-hidden ">
           <NcImage
             containerClassName="absolute inset-0"
-            src="https://picsum.photos/1260/750"
+            src="https://images.pexels.com/photos/2138922/pexels-photo-2138922.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
             className="object-cover w-full h-full"
           />
         </div>

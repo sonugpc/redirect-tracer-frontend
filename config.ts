@@ -1,5 +1,6 @@
 const Config: { [key: string]: any } = {
   API_URL: import.meta.env.VITE_API_ENDPOINT,
+  GATag: import.meta.env.VITE_GA_TAG,
   SITE_CONTENT: [
     {
       heading: "🤷‍♂️ What is WhereGoes Redirect Tracer",
